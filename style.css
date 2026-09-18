@@ -1,0 +1,20 @@
+*{box-sizing:border-box}
+:root{font-family:Arial,"Noto Sans",sans-serif;color:#172033;background:#f5f7fb}
+body{margin:0;min-height:100vh;overflow:hidden}
+button{font:inherit;cursor:pointer}
+.topbar{height:82px;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;background:#fff;border-bottom:1px solid #dfe4ec}
+h1{margin:0;font-size:25px}.topbar p{margin:3px 0 0;color:#667085}
+.grade-switch{display:flex;gap:8px}.grade-switch button,.board-header button{border:1px solid #ccd3df;background:#fff;border-radius:12px;padding:10px 15px}.grade-switch .active{background:#172033;color:#fff}
+.app{height:calc(100vh - 82px);display:flex}
+.sidebar{width:260px;background:#fff;border-right:1px solid #dfe4ec;padding:18px 14px;overflow:auto}
+.sidebar h2{font-size:17px;margin:4px 8px 16px}
+.tool{width:100%;text-align:left;border:0;background:transparent;padding:14px 12px;border-radius:12px;margin:3px 0;font-size:16px}.tool:hover,.tool.active{background:#eef2ff}
+.board{position:relative;flex:1;overflow:hidden;background:#fff;margin:14px;border:1px solid #dfe4ec;border-radius:18px;box-shadow:0 5px 22px #0000000b}
+.board-header{height:55px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;border-bottom:1px solid #e7eaf0;font-weight:700}
+.content{position:absolute;inset:55px 0 0;padding:28px;overflow:auto;z-index:1}
+.card{max-width:900px;margin:auto;background:#fff}.hero{font-size:28px;margin:8px 0 10px}.lead{font-size:19px;color:#475467}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:24px}.tile{padding:20px;border:1px solid #dfe4ec;border-radius:16px;background:#f9fafc}.tile h3{margin:0 0 8px}.formula{font-size:24px;font-weight:700;text-align:center;padding:18px;background:#f4f6fa;border-radius:14px;margin:18px 0}
+.diagram{display:flex;justify-content:center;margin:20px 0}.diagram svg{width:min(560px,90%);height:auto;border:1px solid #e2e6ed;border-radius:14px;background:#fff}
+#drawLayer{position:absolute;inset:55px 0 0;width:100%;height:calc(100% - 55px);z-index:3;pointer-events:none}
+@media(max-width:800px){.topbar{height:auto;min-height:100px;gap:10px;flex-wrap:wrap}.app{height:calc(100vh - 100px)}.sidebar{width:180px}.sidebar h2{font-size:14px}.tool{font-size:14px;padding:12px 8px}.content{padding:18px}.hero{font-size:23px}}
+@media(max-width:600px){.sidebar{width:145px}.grade-switch button{padding:8px 10px}.topbar{padding:10px}.topbar h1{font-size:20px}.topbar p{font-size:12px}}
