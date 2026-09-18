@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Математическа дъска</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Математическа дъска</h1>
+      <p>Интерактивна платформа за час</p>
+    </div>
+    <div class="grade-switch" aria-label="Клас">
+      <button data-grade="5">5 клас</button>
+      <button data-grade="8" class="active">8 клас</button>
+      <button data-grade="9">9 клас</button>
+    </div>
+  </header>
+
+  <main class="app">
+    <aside class="sidebar">
+      <h2>8 клас · Геометрия</h2>
+      <button class="tool active" data-tool="overview">▦ Преглед</button>
+      <button class="tool" data-tool="triangle">△ Триъгълник</button>
+      <button class="tool" data-tool="medians">⌁ Медиани</button>
+      <button class="tool" data-tool="centroid">✦ Тежестен център</button>
+      <button class="tool" data-tool="angles">∠ Ъгли</button>
+      <button class="tool" data-tool="pythagoras">▱ Питагорова теорема</button>
+    </aside>
+
+    <section class="board" id="board">
+      <div class="board-header">
+        <span id="sectionTitle">Геометрия · 8 клас</span>
+        <button id="clearBtn">Изчисти</button>
+      </div>
+      <div id="content" class="content"></div>
+      <canvas id="drawLayer"></canvas>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
